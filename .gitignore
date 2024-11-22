@@ -1,0 +1,5 @@
+server/node_modules
+client/node_modules
+
+
+git remote add origin https://github.com/vilalali/36-Project-Team-ID-45.git
