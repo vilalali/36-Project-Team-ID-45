@@ -1,0 +1,182 @@
+{
+  "1732384506248.js": {
+    "fileName": "1732384506248.js",
+    "size": 1338,
+    "accessFrequency": 25,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica1/1732384506248.js"
+      },
+      {
+        "path": "/replica2/1732384506248.js"
+      }
+    ], 
+    "totalReplicas": 2,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732384552506.js": {
+    "fileName": "1732384552506.js",
+    "size": 442,
+    "accessFrequency": 55,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica1/1732384552506.js"
+      },
+      {
+        "path": "/replica2/1732384552506.js"
+      }
+    ],
+    "totalReplicas": 2,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732384668237.js": {
+    "fileName": "1732384668237.js",
+    "size": 350,
+    "accessFrequency": 55,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica1/1732384668237.js"
+      },
+      {
+        "path": "/replica2/1732384668237.js"
+      }
+    ],
+    "totalReplicas": 2,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732384752333.js": {
+    "fileName": "1732384752333.js",
+    "size": 442,
+    "accessFrequency": 55,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica1/1732384752333.js"
+      },
+      {
+        "path": "/replica2/1732384752333.js"
+      }
+    ],
+    "totalReplicas": 2,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732384995839.js": {
+    "fileName": "1732384995839.js",
+    "size": 412,
+    "accessFrequency": 55,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732384995839.js"
+      },
+      {
+        "path": "/replica_2/1732384995839.js"
+      },
+      {
+        "path": "/replica_3/1732384995839.js"
+      },
+      {
+        "path": "/replica_4/1732384995839.js"
+      },
+      {
+        "path": "/replica_5/1732384995839.js"
+      }
+    ],
+    "totalReplicas": 5,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732385018448.js": {
+    "fileName": "1732385018448.js",
+    "size": 442,
+    "accessFrequency": 25,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732385018448.js"
+      },
+      {
+        "path": "/replica_2/1732385018448.js"
+      },
+      {
+        "path": "/replica_3/1732385018448.js"
+      }
+    ],
+    "totalReplicas": 3,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732385043623.js": {
+    "fileName": "1732385043623.js",
+    "size": 1338,
+    "accessFrequency": 15,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732385043623.js"
+      },
+      {
+        "path": "/replica_2/1732385043623.js"
+      }
+    ],
+    "totalReplicas": 2,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  }
+}

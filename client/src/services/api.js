@@ -13,6 +13,23 @@ export const fetchFiles = async () => {
     }
 };
 
+// api.js - Add this function to fetch the config-details
+
+export const fetchConfigDetails = async () => {
+    try {
+      const response = 
+      await axios.get(`${API_BASE_URL}/config-details`);
+      if (!response.ok) {
+        throw new Error('Error fetching file details');
+      }
+      return await response.json(); // Return the response as JSON
+    } catch (error) {
+      console.error('Error fetching file details:', error);
+      throw error; // Rethrow the error so that the component can handle it
+    }
+  };
+  
+  
 // Fetch metrics with error handling
 export const fetchMetrics = async () => {
     try {
@@ -42,3 +59,5 @@ export const uploadFile = async (file) => {
     }
 };
 
+
+  

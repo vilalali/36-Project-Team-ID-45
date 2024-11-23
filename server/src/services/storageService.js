@@ -2,12 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const replicationConfig = require('../config/replicationConfig');
 
-// Function to save file to the uploads directory
+// Function to save a file to the uploads directory
 const uploadFileToStorage = async (file) => {
     try {
         const targetDir = path.join(__dirname, '../../uploads');
         if (!fs.existsSync(targetDir)) {
-            fs.mkdirSync(targetDir, { recursive: true }); // Create directory if it doesn't exist
+            fs.mkdirSync(targetDir, { recursive: true });
         }
 
         const targetPath = path.join(targetDir, file.filename);
@@ -22,35 +22,26 @@ const uploadFileToStorage = async (file) => {
     }
 };
 
-// Function to create replicas
-const createReplica = (file) => {
+// Function to create replicas for a file
+const createReplica = (file, numReplicas) => {
     try {
-        const { accessFrequency } = file;
-        const { minReplicas, maxReplicas, accessThreshold } = replicationConfig;
-
-        // Determine number of replicas to create based on access frequency
-        let numReplicas = minReplicas;
-        if (accessFrequency >= accessThreshold) {
-            // Increase replicas based on access frequency, but do not exceed maxReplicas
-            numReplicas = Math.min(minReplicas + Math.floor(accessFrequency / 10), maxReplicas);
+        const replicasDir = path.join(__dirname, '../../replicas');
+        if (!fs.existsSync(replicasDir)) {
+            fs.mkdirSync(replicasDir, { recursive: true });
         }
 
-        console.log(`Creating ${numReplicas} replicas for ${file.fileName} based on access frequency (${accessFrequency})`);
+        console.log(`Creating ${numReplicas} replicas for file: ${file.fileName}`);
 
-        // Simulated replication logic
         for (let i = 1; i <= numReplicas; i++) {
-            const replicaPath = path.join(__dirname, `../../replicas/replica_${i}`);
-            if (!fs.existsSync(replicaPath)) {
-                console.log(`Creating replica directory: ${replicaPath}`);
-                fs.mkdirSync(replicaPath, { recursive: true });
+            const replicaDir = path.join(replicasDir, `replica_${i}`);
+            if (!fs.existsSync(replicaDir)) {
+                fs.mkdirSync(replicaDir, { recursive: true });
             }
 
-            const replicaFilePath = path.join(replicaPath, file.fileName);
-            console.log(`Copying file to replica path: ${replicaFilePath}`);
-            fs.copyFileSync(
-                path.join(__dirname, '../../uploads', file.fileName),
-                replicaFilePath
-            );
+            const replicaFilePath = path.join(replicaDir, file.fileName);
+            const sourceFilePath = path.join(__dirname, '../../uploads', file.fileName);
+
+            fs.copyFileSync(sourceFilePath, replicaFilePath);
 
             console.log(`Replica ${i} created at ${replicaFilePath}`);
         }
@@ -60,9 +51,22 @@ const createReplica = (file) => {
     }
 };
 
+// Function to calculate the number of replicas dynamically
+const calculateReplicas = (accessFrequency) => {
+    const { minReplicas, maxReplicas, accessThreshold } = replicationConfig;
 
-// Export functions
+    let replicasToCreate = minReplicas;
+
+    if (accessFrequency >= accessThreshold) {
+        const excessReplicas = Math.floor((accessFrequency - accessThreshold) / 10);
+        replicasToCreate = Math.min(minReplicas + excessReplicas, maxReplicas);
+    }
+
+    return replicasToCreate;
+};
+
 module.exports = {
     uploadFileToStorage,
-    createReplica, // Ensure this is exported
+    createReplica,
+    calculateReplicas,
 };

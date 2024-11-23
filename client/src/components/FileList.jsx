@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import fetchMetaData from '../metadata.json'; // Import the metadata JSON directly
+import FormatBytes from '../components/FormatBytes'; // Import the FormatBytes component
 
-const FileList = ({ files }) => {
-    // Utility function to format bytes into KB, MB, GB, or TB
-    const formatBytes = (bytes) => {
-        const units = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-        let size = bytes;
-        let unitIndex = 0;
+const FileList = () => {
+    const [files, setFiles] = useState([]);
 
-        while (size >= 1024 && unitIndex < units.length - 1) {
-            size /= 1024;
-            unitIndex++;
-        }
+    // Load the metadata when the component mounts
+    useEffect(() => {
+        const loadFiles = () => {
+            // Use the imported metadata directly
+            const fetchedFiles = Object.values(fetchMetaData); // Convert the metadata object to an array
+            setFiles(fetchedFiles);
+        };
 
-        return `${size.toFixed(2)} ${units[unitIndex]}`; // Return formatted size with 2 decimal points
-    };
+        loadFiles();
+    }, []); // Empty dependency array to load once when the component mounts
 
     return (
         <div className="table-responsive">
+            <h3>Files Replication Metrics</h3>
             <table className="table table-bordered">
                 <thead>
                     <tr>
@@ -27,7 +29,7 @@ const FileList = ({ files }) => {
                         <th>Max Replicas</th>
                         <th>Number of Replicas</th>
                         <th>Replicas</th>
-                        <th>Monitored Nodes</th> {/* New column for monitored nodes */}
+                        <th>Monitored Nodes</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,18 +37,20 @@ const FileList = ({ files }) => {
                         files.map((file, index) => (
                             <tr key={index}>
                                 <td>{file.fileName}</td>
-                                <td>{formatBytes(file.size)}</td> {/* Convert size to readable format */}
-                                <td>{file.accessFrequency || 0}</td> {/* Display access frequency */}
-                                <td>{file.minReplicas}</td> {/* Min replicas from config */}
-                                <td>{file.maxReplicas}</td> {/* Max replicas from config */}
-                                <td>{file.replicas ? file.replicas.length : 0}</td> {/* Number of replicas */}
+                                <td><FormatBytes bytes={file.size || 'N/A'} /></td>
+                                <td>{file.accessFrequency || 0}</td>
+                                <td>{file.minReplicas}</td>
+                                <td>{file.maxReplicas}</td>
+                                <td>{file.replicas ? file.replicas.length : 0}</td>
                                 <td>
                                     {file.replicas && file.replicas.length > 0 ? (
-                                        file.replicas.map((replica, idx) => (
-                                            <div key={idx}>
-                                                {replica.node} ({replica.path})
-                                            </div>
-                                        ))
+                                        <div>
+                                            {file.replicas.map((replica, idx) => (
+                                                <div key={idx}>
+                                                    {replica.path.split('/').slice(1).join('/')}
+                                                </div>
+                                            ))}
+                                        </div>
                                     ) : (
                                         <span>No replicas available</span>
                                     )}
@@ -61,7 +65,7 @@ const FileList = ({ files }) => {
                                     ) : (
                                         <span>No monitored nodes</span>
                                     )}
-                                </td> {/* Display monitored nodes */}
+                                </td>
                             </tr>
                         ))
                     ) : (

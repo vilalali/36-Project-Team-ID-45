@@ -1,10 +1,10 @@
 const express = require('express');
 const fileRoutes = require('./fileRoutes');
-const monitorRoutes = require('./monitorRoutes');
+const configDetailsRouts = require('./configDetailsRoutes');
 
 const router = express.Router();
 
 router.use('/files', fileRoutes); // File-related routes
-router.use('/monitor', monitorRoutes); // Monitoring and metrics
+router.use('/config-details', configDetailsRoutes); // Config details route
 
 module.exports = router;

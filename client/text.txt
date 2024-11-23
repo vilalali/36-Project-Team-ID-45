@@ -1,0 +1,33 @@
+server
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── components
+│   │   ├── FileList.jsx
+│   │   ├── FileUpload.jsx
+│   │   ├── FormatBytes.jsx
+│   │   ├── Metrics.jsx
+│   │   └── Navbar.jsx
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   ├── services
+│   │   └── api.js
+│   ├── setupTests.js
+│   └── views
+│       └── Dashboard.jsx
+└── text.txt
+
+4603 directories, 37591 files
