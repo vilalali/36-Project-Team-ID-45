@@ -5,5 +5,4 @@ const replicationConfig = {
     accessThreshold: 10, // Access frequency threshold for creating replicas
     accessFrequency: 100, // Access frequency for creating replicas
 };
-
 module.exports = replicationConfig;
