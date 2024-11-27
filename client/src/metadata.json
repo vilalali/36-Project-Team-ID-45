@@ -1,122 +1,26 @@
 {
-  "1732384506248.js": {
-    "fileName": "1732384506248.js",
-    "size": 1338,
-    "accessFrequency": 25,
+  "1732718765417.md": {
+    "fileName": "1732718765417.md",
+    "size": 56,
+    "accessFrequency": 100,
     "minReplicas": 2,
     "maxReplicas": 5,
     "accessThreshold": 10,
     "replicas": [
       {
-        "path": "/replica1/1732384506248.js"
+        "path": "/replica_1/1732718765417.md"
       },
       {
-        "path": "/replica2/1732384506248.js"
-      }
-    ], 
-    "totalReplicas": 2,
-    "monitoredNodes": [
-      {
-        "nodeName": "Node",
-        "status": "Active",
-        "ip": "10.1.42.130"
-      }
-    ]
-  },
-  "1732384552506.js": {
-    "fileName": "1732384552506.js",
-    "size": 442,
-    "accessFrequency": 55,
-    "minReplicas": 2,
-    "maxReplicas": 5,
-    "accessThreshold": 10,
-    "replicas": [
-      {
-        "path": "/replica1/1732384552506.js"
+        "path": "/replica_2/1732718765417.md"
       },
       {
-        "path": "/replica2/1732384552506.js"
-      }
-    ],
-    "totalReplicas": 2,
-    "monitoredNodes": [
-      {
-        "nodeName": "Node",
-        "status": "Active",
-        "ip": "10.1.42.130"
-      }
-    ]
-  },
-  "1732384668237.js": {
-    "fileName": "1732384668237.js",
-    "size": 350,
-    "accessFrequency": 55,
-    "minReplicas": 2,
-    "maxReplicas": 5,
-    "accessThreshold": 10,
-    "replicas": [
-      {
-        "path": "/replica1/1732384668237.js"
+        "path": "/replica_3/1732718765417.md"
       },
       {
-        "path": "/replica2/1732384668237.js"
-      }
-    ],
-    "totalReplicas": 2,
-    "monitoredNodes": [
-      {
-        "nodeName": "Node",
-        "status": "Active",
-        "ip": "10.1.42.130"
-      }
-    ]
-  },
-  "1732384752333.js": {
-    "fileName": "1732384752333.js",
-    "size": 442,
-    "accessFrequency": 55,
-    "minReplicas": 2,
-    "maxReplicas": 5,
-    "accessThreshold": 10,
-    "replicas": [
-      {
-        "path": "/replica1/1732384752333.js"
+        "path": "/replica_4/1732718765417.md"
       },
       {
-        "path": "/replica2/1732384752333.js"
-      }
-    ],
-    "totalReplicas": 2,
-    "monitoredNodes": [
-      {
-        "nodeName": "Node",
-        "status": "Active",
-        "ip": "10.1.42.130"
-      }
-    ]
-  },
-  "1732384995839.js": {
-    "fileName": "1732384995839.js",
-    "size": 412,
-    "accessFrequency": 55,
-    "minReplicas": 2,
-    "maxReplicas": 5,
-    "accessThreshold": 10,
-    "replicas": [
-      {
-        "path": "/replica_1/1732384995839.js"
-      },
-      {
-        "path": "/replica_2/1732384995839.js"
-      },
-      {
-        "path": "/replica_3/1732384995839.js"
-      },
-      {
-        "path": "/replica_4/1732384995839.js"
-      },
-      {
-        "path": "/replica_5/1732384995839.js"
+        "path": "/replica_5/1732718765417.md"
       }
     ],
     "totalReplicas": 5,
@@ -128,25 +32,22 @@
       }
     ]
   },
-  "1732385018448.js": {
-    "fileName": "1732385018448.js",
-    "size": 442,
-    "accessFrequency": 25,
+  "1732718812405.md": {
+    "fileName": "1732718812405.md",
+    "size": 56,
+    "accessFrequency": 15,
     "minReplicas": 2,
     "maxReplicas": 5,
     "accessThreshold": 10,
     "replicas": [
       {
-        "path": "/replica_1/1732385018448.js"
+        "path": "/replica_1/1732718812405.md"
       },
       {
-        "path": "/replica_2/1732385018448.js"
-      },
-      {
-        "path": "/replica_3/1732385018448.js"
+        "path": "/replica_2/1732718812405.md"
       }
     ],
-    "totalReplicas": 3,
+    "totalReplicas": 2,
     "monitoredNodes": [
       {
         "nodeName": "Node",
@@ -155,22 +56,169 @@
       }
     ]
   },
-  "1732385043623.js": {
-    "fileName": "1732385043623.js",
-    "size": 1338,
+  "1732718941057.zip": {
+    "fileName": "1732718941057.zip",
+    "size": 13280481,
     "accessFrequency": 15,
     "minReplicas": 2,
     "maxReplicas": 5,
     "accessThreshold": 10,
     "replicas": [
       {
-        "path": "/replica_1/1732385043623.js"
+        "path": "/replica_1/1732718941057.zip"
       },
       {
-        "path": "/replica_2/1732385043623.js"
+        "path": "/replica_2/1732718941057.zip"
       }
     ],
     "totalReplicas": 2,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732719042615.zip": {
+    "fileName": "1732719042615.zip",
+    "size": 2163077340,
+    "accessFrequency": 15,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732719042615.zip"
+      },
+      {
+        "path": "/replica_2/1732719042615.zip"
+      }
+    ],
+    "totalReplicas": 2,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732719128968.pdf": {
+    "fileName": "1732719128968.pdf",
+    "size": 153281,
+    "accessFrequency": 55,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732719128968.pdf"
+      },
+      {
+        "path": "/replica_2/1732719128968.pdf"
+      },
+      {
+        "path": "/replica_3/1732719128968.pdf"
+      },
+      {
+        "path": "/replica_4/1732719128968.pdf"
+      },
+      {
+        "path": "/replica_5/1732719128968.pdf"
+      }
+    ],
+    "totalReplicas": 5,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732719166362.pdf": {
+    "fileName": "1732719166362.pdf",
+    "size": 300720,
+    "accessFrequency": 35,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732719166362.pdf"
+      },
+      {
+        "path": "/replica_2/1732719166362.pdf"
+      },
+      {
+        "path": "/replica_3/1732719166362.pdf"
+      },
+      {
+        "path": "/replica_4/1732719166362.pdf"
+      }
+    ],
+    "totalReplicas": 4,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732720363183.doc": {
+    "fileName": "1732720363183.doc",
+    "size": 135168,
+    "accessFrequency": 35,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732720363183.doc"
+      },
+      {
+        "path": "/replica_2/1732720363183.doc"
+      },
+      {
+        "path": "/replica_3/1732720363183.doc"
+      },
+      {
+        "path": "/replica_4/1732720363183.doc"
+      }
+    ],
+    "totalReplicas": 4,
+    "monitoredNodes": [
+      {
+        "nodeName": "Node",
+        "status": "Active",
+        "ip": "10.1.42.130"
+      }
+    ]
+  },
+  "1732721463006.jpeg": {
+    "fileName": "1732721463006.jpeg",
+    "size": 23663,
+    "accessFrequency": 35,
+    "minReplicas": 2,
+    "maxReplicas": 5,
+    "accessThreshold": 10,
+    "replicas": [
+      {
+        "path": "/replica_1/1732721463006.jpeg"
+      },
+      {
+        "path": "/replica_2/1732721463006.jpeg"
+      },
+      {
+        "path": "/replica_3/1732721463006.jpeg"
+      },
+      {
+        "path": "/replica_4/1732721463006.jpeg"
+      }
+    ],
+    "totalReplicas": 4,
     "monitoredNodes": [
       {
         "nodeName": "Node",

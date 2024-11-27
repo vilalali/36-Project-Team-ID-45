@@ -58,7 +58,7 @@ const calculateReplicas = (accessFrequency) => {
     let replicasToCreate = minReplicas;
 
     if (accessFrequency >= accessThreshold) {
-        const excessReplicas = Math.floor((accessFrequency - accessThreshold) / 10);
+        const excessReplicas = Math.floor((accessFrequency - accessThreshold) / accessThreshold);
         replicasToCreate = Math.min(minReplicas + excessReplicas, maxReplicas);
     }
 

@@ -18,9 +18,9 @@ const FileList = () => {
 
     return (
         <div className="table-responsive">
-            <h3>Files Replication Metrics</h3>
-            <table className="table table-bordered">
-                <thead>
+            <h3 className="mt-8 mb-4 text-primary">Files Replication Metrics</h3>
+            <table className="table table-bordered table-hover border-primary">
+                <thead className="thead-light table-primary">
                     <tr>
                         <th>File Name</th>
                         <th>Size</th>

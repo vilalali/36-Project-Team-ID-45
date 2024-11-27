@@ -38,7 +38,7 @@ const Metrics = ({ setMetrics }) => {
                     <tbody>
                         <tr>
                             <td>Total Original Files</td>
-                            <td>{metrics.totalFiles || 'N/A'}</td>
+                            <td>{metrics.totalFiles}</td>
                         </tr>
                         
                         {/* <tr>
