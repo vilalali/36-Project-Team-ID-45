@@ -41,10 +41,10 @@ const Metrics = ({ setMetrics }) => {
                             <td>{metrics.totalFiles || 'N/A'}</td>
                         </tr>
                         
-                        <tr>
+                        {/* <tr>
                             <td>Storage Used</td>
                             <td> <FormatBytes bytes={metrics.storageUsed || 'N/A'} /></td>
-                        </tr>
+                        </tr> */}
                         <tr>
                             <td>Available Storage</td>
                             <td> <FormatBytes bytes={metrics.availableStorage || 'N/A'} /></td>
